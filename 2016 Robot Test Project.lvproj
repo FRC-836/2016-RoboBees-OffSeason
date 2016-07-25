@@ -69,6 +69,7 @@
 	<Property Name="varPersistentID:{965C267D-8ABE-47A3-8D55-810CD06E729A}" Type="Ref">/Target/Auto QCP Variables.lvlib/Rally Pt/Rally Pt 1 X</Property>
 	<Property Name="varPersistentID:{9716932E-3459-4BF7-BF68-41B013707E16}" Type="Ref">/Target/Auto QCP Variables.lvlib/Defense Details/Courtyard Power</Property>
 	<Property Name="varPersistentID:{975F8042-B6FA-48B9-883E-BE396AB6A6F5}" Type="Ref">/Target/Auto QCP Variables.lvlib/Position Offsets/Position Offset_4</Property>
+	<Property Name="varPersistentID:{9C0CF22E-8100-4469-A3F6-67D7EA446471}" Type="Ref">/Target/Shared.lvlib/Intake RT FIFO</Property>
 	<Property Name="varPersistentID:{9CBD9BEF-455A-4300-ABE8-3EC1D856488A}" Type="Ref">/Target/Auto QCP Variables.lvlib/Rally Pt/Rally Pt 2 X R</Property>
 	<Property Name="varPersistentID:{A19177A0-0601-484D-98D8-6E6972963AB9}" Type="Ref">/Target/Auto QCP Variables.lvlib/Defense Details/Ramparts Enc</Property>
 	<Property Name="varPersistentID:{A5227BB5-4C68-4CBC-8AFF-2C5661BC2C46}" Type="Ref">/Target/Auto QCP Variables.lvlib/Defense Details/Low Goal Enc</Property>
@@ -81,6 +82,7 @@
 	<Property Name="varPersistentID:{B661096A-CC1D-4BB8-A2BF-A461306E387B}" Type="Ref">/Target/Auto QCP Variables.lvlib/Turn and Score/Batter Pitch Thresh</Property>
 	<Property Name="varPersistentID:{B747266F-D705-4AA3-96D7-98CE4810CE9C}" Type="Ref">/Target/Shared.lvlib/Controller Values/Intake Roller</Property>
 	<Property Name="varPersistentID:{BACBC732-4675-4039-9156-BEDC0BB55ABE}" Type="Ref">/Target/Auto QCP Variables.lvlib/Position Offsets/Position Offset_1</Property>
+	<Property Name="varPersistentID:{BC827D15-64AA-403B-8976-34A3DF2FA848}" Type="Ref">/Target/Shared.lvlib/Tusks RT FIFO</Property>
 	<Property Name="varPersistentID:{BFF68A7B-8CD0-468D-8A4F-910793978A2C}" Type="Ref">/Target/Auto QCP Variables.lvlib/Rally Pt/Rally Pt 3 Y L</Property>
 	<Property Name="varPersistentID:{C4BCC847-8A8A-40B7-A677-4C555ACD7350}" Type="Ref">/Target/Auto QCP Variables.lvlib/Rally Pt/Rally Pt 4 X L</Property>
 	<Property Name="varPersistentID:{C5DB9BF7-F32A-4C21-BC10-CBC32C3FB0CD}" Type="Ref">/Target/Auto QCP Variables.lvlib/Turn and Score/Tower Max Enc L</Property>
@@ -282,6 +284,22 @@ AddOutputFilter chunkFilter
 				<Item Name="Latch.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Logic/Latch.vi"/>
 				<Item Name="FPS Calculator.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Vision/FPS Calculator.vi"/>
 				<Item Name="TDMS File Writer.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMS File Writer.vi"/>
+				<Item Name="QCP_Get_DBL_Array.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/QCP Support Code/QCP_Get_DBL_Array.vi"/>
+				<Item Name="QCP_Get_I32_Array.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/QCP Support Code/QCP_Get_I32_Array.vi"/>
+				<Item Name="QCP_Get_STR_Array.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/QCP Support Code/QCP_Get_STR_Array.vi"/>
+				<Item Name="Pneumatics Position.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Support Code/Pneumatics Position.ctl"/>
+				<Item Name="Pneumatics Command.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Support Code/Pneumatics Command.ctl"/>
+				<Item Name="Solenoid Control Loop.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Support Code/Solenoid Control Loop.ctl"/>
+				<Item Name="Pneumatics Status.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Support Code/Pneumatics Status.ctl"/>
+				<Item Name="Pneumatic Sensor Loop.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Support Code/Pneumatic Sensor Loop.ctl"/>
+				<Item Name="Pneumatic Control Initialize.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Pneumatic Control Initialize.vi"/>
+				<Item Name="Pneumatic Control Loop.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Pneumatic Control Loop.vi"/>
+				<Item Name="Feedback Method.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Support Code/Feedback Method.ctl"/>
+				<Item Name="Pneumatics Configuration.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Support Code/Pneumatics Configuration.ctl"/>
+				<Item Name="Solenoid Configure.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Support Code/Solenoid Configure.ctl"/>
+				<Item Name="Pneumatic Sensor Loop.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Pneumatic Sensor Loop.vi"/>
+				<Item Name="Pneumatics Notifier.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Support Code/Pneumatics Notifier.ctl"/>
+				<Item Name="Pneumatic Command Initialize.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Pneumatic Command Initialize.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -1000,6 +1018,13 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_CameraGet Brightness.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraGet Brightness.vi"/>
 				<Item Name="WPI_Camera Registry.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_Camera Registry.vi"/>
 				<Item Name="WPI_CameraOpen.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraOpen.vi"/>
+				<Item Name="WPI_AnalogModuleGetAverageVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/AnalogModule/WPI_AnalogModuleGetAverageVoltage.vi"/>
+				<Item Name="WPI_AnalogChannelToAnalogModule.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/AnalogChannel/WPI_AnalogChannelToAnalogModule.vi"/>
+				<Item Name="WPI_AnalogChannelGetAverageVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/AnalogChannel/WPI_AnalogChannelGetAverageVoltage.vi"/>
+				<Item Name="FPGA_DIOReadDI.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/DIO/FPGA_DIOReadDI.vi"/>
+				<Item Name="WPI_DigitalModuleGetDIO.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalModule/WPI_DigitalModuleGetDIO.vi"/>
+				<Item Name="WPI_DigitalInputToDigitalModule.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputToDigitalModule.vi"/>
+				<Item Name="WPI_DigitalInputGetValue.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputGetValue.vi"/>
 			</Item>
 			<Item Name="Cheesy_drive.vi" Type="VI" URL="../Cheesy_drive.vi"/>
 			<Item Name="DriveStraightExact.vi" Type="VI" URL="../DRIVING/DriveStraightExact.vi"/>
@@ -1042,7 +1067,7 @@ AddOutputFilter chunkFilter
 			<Item Name="QCP Reader.vi" Type="VI" URL="../QCP Reader.vi"/>
 			<Item Name="Wrapped To Absolute.vi" Type="VI" URL="../Wrapped To Absolute.vi"/>
 			<Item Name="IMUType.ctl" Type="VI" URL="../IMUType.ctl"/>
-			<Item Name="836_Camera Registry.vi" Type="VI" URL="../836_Camera Registry.vi"/>
+			<Item Name="836_Camera Registry.vi" Type="VI" URL="../../2016 RoboBees DRIVE CODE EXPERIMENTAL/836_Camera Registry.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
