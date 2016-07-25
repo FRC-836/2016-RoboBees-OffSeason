@@ -27,6 +27,7 @@
 	<Property Name="varPersistentID:{359CC448-9961-4344-9E7E-9C5BE16880DE}" Type="Ref">/Target/Shared.lvlib/Sensors/Accel X</Property>
 	<Property Name="varPersistentID:{35D51C26-B223-470D-A203-DA8DECF9EA93}" Type="Ref">/Target/Shared.lvlib/Sensors/Accel Y</Property>
 	<Property Name="varPersistentID:{36BBDC28-51ED-4937-841B-75E05A5B54AF}" Type="Ref">/Target/Auto QCP Variables.lvlib/Rally Pt/Rally Pt 3 X R</Property>
+	<Property Name="varPersistentID:{3D2EA805-71A6-47FD-8FA9-69C971A5F216}" Type="Ref">/Target/Shared.lvlib/Drive Loop RT FIFO</Property>
 	<Property Name="varPersistentID:{3F4BDFD3-1AFD-4923-B477-2D1088CFEF7D}" Type="Ref">/Target/Auto QCP Variables.lvlib/Turn and Score/Tower Min Enc R</Property>
 	<Property Name="varPersistentID:{404F49DE-8F81-4143-A087-E1239EF4B2F2}" Type="Ref">/Target/Shared.lvlib/Auto Variables/Rally Point Distance</Property>
 	<Property Name="varPersistentID:{40A30AD7-A59A-4DAA-9F6F-A0A24C368ABA}" Type="Ref">/Target/Auto QCP Variables.lvlib/Defense Details/Moat Pitch T</Property>
@@ -264,6 +265,9 @@ AddOutputFilter chunkFilter
 		<Item Name="Auto QCP Variables.lvlib" Type="Library" URL="../Auto QCP Variables.lvlib"/>
 		<Item Name="PortcullisStates.ctl" Type="VI" URL="../PortcullisStates.ctl"/>
 		<Item Name="TDMS File Writer And Close.vi" Type="VI" URL="../TDMS File Writer And Close.vi"/>
+		<Item Name="Drive Loop Camera Sensor.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Loop Camera Sensor.vi"/>
+		<Item Name="Drive Loop Gyro Angle.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Loop Gyro Angle.vi"/>
+		<Item Name="Drive Loop Encoder Count.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Loop Encoder Count.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="QCP Get.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/QCP Get.vi"/>
@@ -300,6 +304,29 @@ AddOutputFilter chunkFilter
 				<Item Name="Pneumatic Sensor Loop.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Pneumatic Sensor Loop.vi"/>
 				<Item Name="Pneumatics Notifier.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Support Code/Pneumatics Notifier.ctl"/>
 				<Item Name="Pneumatic Command Initialize.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Pneumatic Command Initialize.vi"/>
+				<Item Name="Pneumatics Command Set.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Pneumatics Command Set.vi"/>
+				<Item Name="Pneumatics Command Set Periodic.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Support Code/Pneumatics Command Set Periodic.vi"/>
+				<Item Name="Pneumatics Command Set Tele.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Pneumatics/Support Code/Pneumatics Command Set Tele.vi"/>
+				<Item Name="Drive Loop Initialize.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Loop Initialize.vi"/>
+				<Item Name="Drive Loop Control Loop.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Loop Control Loop.vi"/>
+				<Item Name="Drive Code PID Bundle.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Code PID Bundle.ctl"/>
+				<Item Name="Drive Code Command.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Code Command.ctl"/>
+				<Item Name="Drive Code Notifier.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Code Notifier.ctl"/>
+				<Item Name="Camera Cluster.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Camera Cluster.ctl"/>
+				<Item Name="Sensor Cluster.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Sensor Cluster.ctl"/>
+				<Item Name="Drive Code Bundle.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Code Bundle.ctl"/>
+				<Item Name="Drive Types.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Types.ctl"/>
+				<Item Name="Drive Loop Turn to Camera.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Loop Turn to Camera.vi"/>
+				<Item Name="Drive Loop Tank Drive.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Loop Tank Drive.vi"/>
+				<Item Name="Drive Loop Hold Yaw.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Loop Hold Yaw.vi"/>
+				<Item Name="Drive Loop Hold Position.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Loop Hold Position.vi"/>
+				<Item Name="Drive Loop Follow Camera.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Loop Follow Camera.vi"/>
+				<Item Name="Drive Loop Drive Distance.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Loop Drive Distance.vi"/>
+				<Item Name="Drive Loop Drive Continuous.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Loop Drive Continuous.vi"/>
+				<Item Name="Drive Loop Do Nothing.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Loop Do Nothing.vi"/>
+				<Item Name="Drive Loop Cheesey Drive.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Loop Cheesey Drive.vi"/>
+				<Item Name="Drive Loop Turn.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Loop Turn.vi"/>
+				<Item Name="Drive Loop Command.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Loop Command.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
