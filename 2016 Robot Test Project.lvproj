@@ -268,6 +268,10 @@ AddOutputFilter chunkFilter
 		<Item Name="Drive Loop Camera Sensor.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Loop Camera Sensor.vi"/>
 		<Item Name="Drive Loop Gyro Angle.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Loop Gyro Angle.vi"/>
 		<Item Name="Drive Loop Encoder Count.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Loop Encoder Count.vi"/>
+		<Item Name="TDMS Channel Initialize.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMSv2/TDMS Channel Initialize.vi"/>
+		<Item Name="TDMS Channel Write.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMSv2/TDMS Channel Write.vi"/>
+		<Item Name="Logging Data.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Logging Data.ctl"/>
+		<Item Name="Logging Data.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Logging Data.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="QCP Get.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/QCP Get.vi"/>
@@ -281,13 +285,10 @@ AddOutputFilter chunkFilter
 				<Item Name="QCP_Get_STR.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/QCP Support Code/QCP_Get_STR.vi"/>
 				<Item Name="QCP_Set_I32.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/QCP Support Code/QCP_Set_I32.vi"/>
 				<Item Name="QCP_Set_STR.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/QCP Support Code/QCP_Set_STR.vi"/>
-				<Item Name="TDMS Initialize.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMS Initialize.vi"/>
 				<Item Name="Signal Pulse.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Logic/Signal Pulse.vi"/>
-				<Item Name="TDMS Saver.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMS Saver.vi"/>
 				<Item Name="Deadzone.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Logic/Deadzone.vi"/>
 				<Item Name="Latch.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Logic/Latch.vi"/>
 				<Item Name="FPS Calculator.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Vision/FPS Calculator.vi"/>
-				<Item Name="TDMS File Writer.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMS File Writer.vi"/>
 				<Item Name="QCP_Get_DBL_Array.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/QCP Support Code/QCP_Get_DBL_Array.vi"/>
 				<Item Name="QCP_Get_I32_Array.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/QCP Support Code/QCP_Get_I32_Array.vi"/>
 				<Item Name="QCP_Get_STR_Array.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/QCP Support Code/QCP_Get_STR_Array.vi"/>
@@ -327,6 +328,14 @@ AddOutputFilter chunkFilter
 				<Item Name="Drive Loop Cheesey Drive.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Loop Cheesey Drive.vi"/>
 				<Item Name="Drive Loop Turn.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Code Support/Drive Loop Turn.vi"/>
 				<Item Name="Drive Loop Command.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/Drive/Drive Code/Drive Loop Command.vi"/>
+				<Item Name="Group Data.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMSv2/Group Data.ctl"/>
+				<Item Name="Group Channels.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMSv2/Group Channels.ctl"/>
+				<Item Name="Channel Initializer.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMSv2/Channel Initializer.ctl"/>
+				<Item Name="TDMS RT FIFO Packet.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMSv2/TDMS RT FIFO Packet.ctl"/>
+				<Item Name="Back Channel Data.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMSv2/Back Channel Data.ctl"/>
+				<Item Name="TDMS Logging Loop.vi" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMSv2/TDMS Logging Loop.vi"/>
+				<Item Name="TDMS Channel Info.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMSv2/TDMS Channel Info.ctl"/>
+				<Item Name="GroupChannelIDs.ctl" Type="VI" URL="/&lt;userlib&gt;/836-Library/System/TDMSv2/GroupChannelIDs.ctl"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -956,10 +965,8 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_CAN_PDPGlobalOps.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/PDP/WPI_CAN_PDPGlobalOps.ctl"/>
 				<Item Name="WPI_CAN_PDPGlobal.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/PDP/WPI_CAN_PDPGlobal.vi"/>
 				<Item Name="WPI_CAN_PDPMessageIDs.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/PDP/WPI_CAN_PDPMessageIDs.ctl"/>
-				<Item Name="WPI_CAN_PDPSend.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/PDP/WPI_CAN_PDPSend.vi"/>
 				<Item Name="WPI_CAN_PDPDecode4Currents.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/PDP/WPI_CAN_PDPDecode4Currents.vi"/>
 				<Item Name="WPI_CAN_PDPReceive.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/PDP/WPI_CAN_PDPReceive.vi"/>
-				<Item Name="WPI_Power Get PDP Currents.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Power/WPI_Power Get PDP Currents.vi"/>
 				<Item Name="WPI_EncoderReset.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Encoder/WPI_EncoderReset.vi"/>
 				<Item Name="WPI_CameraUpdate Camera Status.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraUpdate Camera Status.vi"/>
 				<Item Name="WPI_CameraGet Frame Rate.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraGet Frame Rate.vi"/>
@@ -1023,9 +1030,6 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_ServoDeviceRef.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/PWM/Servo/WPI_ServoDeviceRef.ctl"/>
 				<Item Name="WPI_ServoToPWM.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/PWM/Servo/WPI_ServoToPWM.vi"/>
 				<Item Name="WPI_ServoRefNum Registry Set.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/PWM/Servo/WPI_ServoRefNum Registry Set.vi"/>
-				<Item Name="WPI_ServoSetAngle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/PWM/Servo/WPI_ServoSetAngle.vi"/>
-				<Item Name="WPI_ServoSetPosition.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/PWM/Servo/WPI_ServoSetPosition.vi"/>
-				<Item Name="WPI_ServoRefNum Registry Get.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/PWM/Servo/WPI_ServoRefNum Registry Get.vi"/>
 				<Item Name="WPI_Power Get PDP Voltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Power/WPI_Power Get PDP Voltage.vi"/>
 				<Item Name="WPI_Power Get roboRIO Input Voltage and Current.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Power/WPI_Power Get roboRIO Input Voltage and Current.vi"/>
 				<Item Name="WPI_CameraGetScaledAttr.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/USB Support/WPI_CameraGetScaledAttr.vi"/>
@@ -1081,8 +1085,6 @@ AddOutputFilter chunkFilter
 			<Item Name="Status.vi" Type="VI" URL="../IMU/Status.vi"/>
 			<Item Name="Turn.vi" Type="VI" URL="../DRIVING/Turn.vi"/>
 			<Item Name="Wind2Wrap.vi" Type="VI" URL="../IMU/Wind2Wrap.vi"/>
-			<Item Name="Pneumatic Controller.vi" Type="VI" URL="../Pneumatic Controller.vi"/>
-			<Item Name="Pneumatic State Machine.ctl" Type="VI" URL="../Pneumatic State Machine.ctl"/>
 			<Item Name="Pneumatic Commands.ctl" Type="VI" URL="../Pneumatic Commands.ctl"/>
 			<Item Name="DriveDistance.vi" Type="VI" URL="../DRIVING/DriveDistance.vi"/>
 			<Item Name="Latch and Hold.vi" Type="VI" URL="../Latch and Hold.vi"/>
@@ -1094,7 +1096,6 @@ AddOutputFilter chunkFilter
 			<Item Name="QCP Reader.vi" Type="VI" URL="../QCP Reader.vi"/>
 			<Item Name="Wrapped To Absolute.vi" Type="VI" URL="../Wrapped To Absolute.vi"/>
 			<Item Name="IMUType.ctl" Type="VI" URL="../IMUType.ctl"/>
-			<Item Name="836_Camera Registry.vi" Type="VI" URL="../../2016 RoboBees DRIVE CODE EXPERIMENTAL/836_Camera Registry.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
